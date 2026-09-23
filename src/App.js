@@ -1,6 +1,7 @@
 import './App.css';
 import { RiHomeHeartFill } from "react-icons/ri";
-import MyRefAdd from './07_myRef/MyRefAdd';
+import Gallery from './08_gallery/Gallery';
+// import MyRefAdd from './07_myRef/MyRefAdd';
 // import MyRef from './07_myRef/MyRef';
 // import TrafficSelf from './06_traffic/TrafficSelf';
 // import Traffic from './06_traffic/Traffic';
@@ -26,7 +27,8 @@ function App() {
         {/* <Traffic /> */}
         {/* <TrafficSelf /> */}
         {/* <MyRef /> */}
-        <MyRefAdd />
+        {/* <MyRefAdd /> */}
+        <Gallery />
       </main>
       <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
         ⓒ Su jin Kim
