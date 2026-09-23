@@ -1,6 +1,9 @@
 import './App.css';
 import { RiHomeHeartFill } from "react-icons/ri";
-import Traffic from './06_traffic/Traffic';
+import MyRefAdd from './07_myRef/MyRefAdd';
+// import MyRef from './07_myRef/MyRef';
+// import TrafficSelf from './06_traffic/TrafficSelf';
+// import Traffic from './06_traffic/Traffic';
 // import Lotto from './05_lotto/Lotto';
 // import MyList from './04_myList/MyList';
 //import logo from './logo.svg';
@@ -20,7 +23,10 @@ function App() {
         {/* <MyList /> */}
         {/* <Lotto /> */}
         {/* <MyClock /> */}
-        <Traffic />
+        {/* <Traffic /> */}
+        {/* <TrafficSelf /> */}
+        {/* <MyRef /> */}
+        <MyRefAdd />
       </main>
       <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
         ⓒ Su jin Kim
