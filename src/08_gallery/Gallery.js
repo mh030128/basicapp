@@ -8,7 +8,7 @@ export default function Gallery() {
   const inRef = useRef();
 
   const getFetchData = () => {
-    let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?`
+    let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?`;
     url = `${url}serviceKey=${process.env.REACT_APP_API_KEY}`;
     url = `${url}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A`;
     url = `${url}&keyword=${encodeURI(inRef.current.value)}&_type=json`;
@@ -44,16 +44,28 @@ export default function Gallery() {
   }, []);
 
   useEffect(() => {
-    let tm = tdata.map(item => <GalleryCard
+    // let tm = tdata.map(item => <GalleryCard
+    //                             item = {item}
+    //                             key = {item.galContentId} />
+    // );
+    // // let tm = tdata.map(item => {
+    // //   console.log('key값:', item.galContentId);
+    // //   return <GalleryCard
+    // //             item = {item}
+    // //             key = {item.galContentId} />
+    // // });
+    // setCards(tm);
+    const seenTitles = new Set();
+    const uniqueData = tdata.filter(item => {
+      if (seenTitles.has(item.galTitle)) return false;  // 이미 나온 title이면 제외
+      seenTitles.add(item.galTitle);                    // 처음 보는 title이면 기록해두고
+      return true;                                       // 남긴다
+    });
+
+    let tm = uniqueData.map(item => <GalleryCard
                                 item = {item}
                                 key = {item.galContentId} />
     );
-    // let tm = tdata.map(item => {
-    //   console.log('key값:', item.galContentId);
-    //   return <GalleryCard
-    //             item = {item}
-    //             key = {item.galContentId} />
-    // });
     setCards(tm);
   }, [tdata]);
 
