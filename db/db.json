@@ -1,14 +1,9 @@
 {
   "posts": [
     {
-      "id": "Nc1MfljWUUk",
-      "title": "태종대 관광하기 수정2",
-      "author": "홍길동"
-    },
-    {
-      "id": "7Lq4mokUTeY",
-      "title": "태종대 관광 점심 수정",
-      "author": "유관순"
+      "id": "T8qAVi5EeMg",
+      "title": "axios 제목 수정",
+      "author": "axios 작성자 수정"
     }
   ],
   "comments": [
