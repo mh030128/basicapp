@@ -4,6 +4,7 @@ import RouteMain from './09_routeMain/RouteMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import Rest from './11_rest/Rest';
 import RecoilMain from './10_recoilDiv/RecoilMain';
 import Gallery from './08_gallery/Gallery';
 import MyRefAdd from './07_myRef/MyRefAdd';
@@ -42,6 +43,9 @@ function App() {
             <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
               <Link to='/recoil'>Recoil예제</Link>
             </li>
+            <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
+              <Link to='/rest'>JSON CRUD 예제</Link>
+            </li>
           </ul>
           <p><Link to='/'><RiHomeHeartFill /></Link></p>
         </header>
@@ -53,6 +57,7 @@ function App() {
             <Route path='/add' element={<MyRefAdd />} />
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/recoil' element={<RecoilMain />} />
+            <Route path='/rest' element={<Rest />} />
           </Routes>
        </main>
         <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
